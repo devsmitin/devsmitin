@@ -30,7 +30,9 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       )}
       <main>{children}</main>
-      <footer className="container mx-auto px-6 md:px-32 py-1 my-5 dark:text-white text-gray-800">&copy; {new Date().getFullYear()}, Smit M.</footer>
+      <footer className="container mx-auto px-6 md:px-32 py-1 my-5 dark:text-white text-gray-800">
+        &copy; {new Date().getFullYear()}, Smit M.
+      </footer>
     </div>
   )
 }
