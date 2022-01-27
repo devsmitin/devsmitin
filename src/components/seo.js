@@ -19,6 +19,7 @@ function Seo({ description, lang, meta, image: metaImage, title }) {
             title
             description
             author
+            defaultImage: image
           }
         }
       }
@@ -30,7 +31,7 @@ function Seo({ description, lang, meta, image: metaImage, title }) {
   const image =
     metaImage && metaImage.src
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null
+      : `${defaultImage}` || ""
 
   return (
     <Helmet
@@ -101,7 +102,9 @@ function Seo({ description, lang, meta, image: metaImage, title }) {
               ]
         )
         .concat(meta)}
-    />
+    >
+      <meta name="image" content={image} />
+    </Helmet>
   )
 }
 

@@ -12,11 +12,10 @@ import gatsby from "../images/gatsby-js.svg"
 import wordpress from "../images/wordpress.svg"
 import shopify from "../images/shopify.svg"
 // import contentful from "../images/contentful.svg"
-import social from "../images/social.png"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Full-stack frontend developer with over 5 years of industry experience" image={social} />
+    <Seo title="Full-stack frontend developer with over 5 years of industry experience" />
 
     <div className="container relative flex flex-col justify-between mx-auto px-6 md:px-32 py-4">
       <div className="flex flex-col py-2 max-w-3xl dark:text-white text-gray-800">
