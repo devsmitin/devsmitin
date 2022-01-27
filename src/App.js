@@ -22,11 +22,11 @@ const App = () => {
       </Helmet>
       <main className="dark:bg-gray-900 bg-orange-50 font-mono relative overflow-hidden min-h-screen">
         {showHeader && (
-          <header className="h-24 sm:h-32 flex items-center z-30 w-full">
+          <header className="flex items-center h-24 sm:h-32 w-full z-30">
             <div className="container mx-auto px-6 flex items-center justify-between">
-              <h1 className="text-gray-800 dark:text-white font-black text-xl flex items-center">
+              <span className="text-gray-800 dark:text-white font-black text-xl flex items-center">
                 Smit M.
-              </h1>
+              </span>
               <div className="flex items-center">
                 <nav className="font-sans text-gray-800 dark:text-white uppercase flex items-center">
                   <a
@@ -51,21 +51,21 @@ const App = () => {
         )}
 
         <div className="flex relative z-20 items-center">
-          <div className="container mx-auto px-6 md:px-32 flex flex-col justify-between relative py-4">
-            <div className="flex flex-col max-w-3xl dark:text-white text-gray-800 py-2">
+          <div className="container relative flex flex-col justify-between mx-auto px-6 md:px-32 py-4">
+            <div className="flex flex-col py-2 max-w-3xl dark:text-white text-gray-800">
               <Gravatar
                 size={200}
                 email="aquarocker20@gmail.com"
                 className="rounded-md mx-autos my-6 w-28"
                 alt="Gravatar for Smit Modi"
               />
-              <p className="text-2xl my-6 dark:text-white">
-                Hi, my name is Smit 👨‍💻
-              </p>
-              <h2 className="mb-6 text-3xl md:text-4xl font-bold">
+              <h2 className="text-2xl my-6 dark:text-white">
+                Hi, my name is Smit Modi.
+              </h2>
+              <h1 className="mb-6 text-3xl md:text-4xl font-bold">
                 A full-stack frontend developer with a passion for design &amp;
                 JavaScript.
-              </h2>
+              </h1>
 
               <p className="mb-6 text-2xl">
                 I have extensive knowledge of HTML, CSS &amp; JavaScript (ES6)
@@ -127,7 +127,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className="relative w-72 h-72 lg:w-96 lg:h-96 lg:absolute lg:-bottom-32 lg:-right-20 mx-auto">
+        <div className="relative lg:absolute lg:-bottom-32 lg:-right-20 w-72 h-72 lg:w-96 lg:h-96 mx-auto">
           <div className="text-extrabold text-xl absolute left-16 lg:left-24 z-20 top-1/4">
             <span className="text-7xl">🎨</span>
             <p>Got a project?</p>
