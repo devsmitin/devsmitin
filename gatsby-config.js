@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Smit M.`,
+    description: `Full-stack frontend developer with over 5 years of industry experience`,
+    author: `@devsmitin`,
+    siteUrl: `https://devsmit.in/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,6 +32,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    `gatsby-source-gravatar`,
+    // {
+    //   resolve: `gatsby-source-gravatar`,
+    //   options: {
+    //     emails: [
+    //       `first@example.com`,
+    //     ],
+    //     query: `?size=200&m=dp`,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
