@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet";
+
 import Gravatar from "react-gravatar";
 
 import tailwind from "./assets/tailwindcss.svg";
@@ -14,6 +16,10 @@ const showHeader = false;
 const App = () => {
   return (
     <div className="App">
+      <Helmet>
+        <title>Smit M. : Full-stack frontend developer from India!</title>
+        <meta name="description" content="A full-stack frontend developer with over 5 years of experience in various web technologies"/>
+      </Helmet>
       <main className="dark:bg-gray-900 bg-orange-50 font-mono relative overflow-hidden min-h-screen">
         {showHeader && (
           <header className="h-24 sm:h-32 flex items-center z-30 w-full">
