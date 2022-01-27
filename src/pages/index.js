@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import GravatarImage from "../components/GravatarImage"
 
 import bootstrap from "../images/bootstrap-5.svg"
 import sass from "../images/sass.svg"
@@ -10,12 +11,12 @@ import react from "../images/react-js.svg"
 import gatsby from "../images/gatsby-js.svg"
 import wordpress from "../images/wordpress.svg"
 import shopify from "../images/shopify.svg"
-import GravatarImage from "../components/GravatarImage"
 // import contentful from "../images/contentful.svg"
+import social from "../images/social.png"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Full-stack frontend developer with over 5 years of industry experience" />
+    <Seo title="Full-stack frontend developer with over 5 years of industry experience" image={social} />
 
     <div className="container relative flex flex-col justify-between mx-auto px-6 md:px-32 py-4">
       <div className="flex flex-col py-2 max-w-3xl dark:text-white text-gray-800">
