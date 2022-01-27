@@ -2,6 +2,7 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import GravatarImage from "../components/GravatarImage"
 
 import bootstrap from "../images/bootstrap-5.svg"
 import sass from "../images/sass.svg"
@@ -10,7 +11,6 @@ import react from "../images/react-js.svg"
 import gatsby from "../images/gatsby-js.svg"
 import wordpress from "../images/wordpress.svg"
 import shopify from "../images/shopify.svg"
-import GravatarImage from "../components/GravatarImage"
 // import contentful from "../images/contentful.svg"
 
 const IndexPage = () => (
