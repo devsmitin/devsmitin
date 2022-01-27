@@ -1,13 +1,13 @@
 import React, { useMemo } from "react"
 import { toUrl } from "gatsby-source-gravatar"
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image"
 
 const GravatarImage = props => {
-  const url = useMemo(() => toUrl(props.email, 'd=retro&r=g&s=200'), [])
+  let email = props.email || "blah@blah.com"
+  const url = useMemo(() => toUrl(email, "d=retro&r=g&s=200"), [email])
   return (
     <img
       src={url}
-      alt={`${props.email}'s gravatar`}
+      alt={`${email}'s gravatar`}
       className="rounded-md mx-autos my-6 w-28"
     />
   )
