@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --grad-bg: #fff7ed;
+  --main-bg: #a799cc;
+  --dot-spacing: 30px;
+  --dot-size: 0px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grad-bg: #161122;
+    --dot-size: 1px;
+  }
+}
+body {
+  background: linear-gradient(
+      90deg,
+      var(--grad-bg) var(--dot-spacing),
+      transparent 1%
+    ),
+    linear-gradient(0deg, var(--grad-bg) var(--dot-spacing), transparent 1%);
+  background-position: center;
+  background-color: var(--main-bg);
+  background-size: calc(var(--dot-spacing) + var(--dot-size))
+    calc(var(--dot-spacing) + var(--dot-size));
+  background-attachment: fixed;
+  transition: all;
+}
