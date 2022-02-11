@@ -1,16 +1,6 @@
 <h1>Hi 👋, I'm Smit Modi</h1>
 <h3>A passionate frontend developer from India</h3>
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=devsmitin&label=Profile%20views&color=0e75b6&style=flat" alt="devsmitin"/>
-</p>
-
-<p align="left">
-  <a href="https://twitter.com/devsmitin" target="blank">
-    <img src="https://img.shields.io/twitter/follow/devsmitin?logo=twitter&style=for-the-badge" alt="devsmitin"/>
-  </a>
-</p>
-
 - 🌱 I'm currently learning **Gatsby JS, Shopify, Tailwind CSS**
 
 - 💬 Ask me about **React JS, Shopify, Bootstrap**
@@ -18,7 +8,6 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
   <a href="https://twitter.com/devsmitin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="devsmitin" height="30" width="40"/></a>
-  <a href="https://dev.to/devsmitin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="devsmitin" height="30" width="40"/></a>
   <a href="https://codepen.io/devsmitin" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="devsmitin" height="30" width="40"/></a>
 </p>
 
@@ -37,10 +26,10 @@
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40">
   </a>
   <a href="https://webpack.js.org" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" alt="webpack" width="40" height="40">
+    <img src="https://www.vectorlogo.zone/logos/js_webpack/js_webpack-icon.svg" alt="webpack" width="40" height="40">
   </a>
   <a href="https://sass-lang.com" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40">
+    <img src="https://www.vectorlogo.zone/logos/sass-lang/sass-lang-icon.svg" alt="sass" width="40" height="40">
   </a>
   <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40">
@@ -49,7 +38,7 @@
     <img src="https://www.vectorlogo.zone/logos/babeljs/babeljs-icon.svg" alt="babel" width="40" height="40">
   </a>
   <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40">
+    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" width="40" height="40">
   </a>
   <a href="https://redux.js.org" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40">
@@ -61,7 +50,7 @@
     <img src="https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" alt="gatsby" width="40" height="40">
   </a>
   <a href="https://www.linux.org/" target="_blank" rel="noreferrer">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40">
+    <img src="https://www.vectorlogo.zone/logos/linux/linux-icon.svg" alt="linux" width="40" height="40">
   </a>
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40">
@@ -69,13 +58,16 @@
 </p>
 
 <p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin" style="background-color: #fff;" />
 </p>
 
 <p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin" style="background-color: #fff;" />
 </p>
 
 <p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&" alt="devsmitin"/>
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&" alt="devsmitin" style="background-color: #fff;" />
 </p>
+
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=devsmitin&label=Profile%20views&color=0e75b6https://www.vectorlogo.zone/logos/linux/linux-icon.svg>
