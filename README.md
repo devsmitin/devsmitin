@@ -44,7 +44,7 @@
 </span>
 
 <p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light" alt="devsmitin"/>
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light&background=FFFFFF" alt="devsmitin"/>
 </span>
 
 <p align="left">
