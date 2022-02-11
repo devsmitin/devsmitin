@@ -71,7 +71,7 @@
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
 </p>
 
-<p>
+<p>&nbsp;
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
 </p>
 
