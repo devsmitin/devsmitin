@@ -1,10 +1,11 @@
-<h1>Hi 👋, I'm Smit Modi</h1>
-<h3>A passionate frontend developer from India</h3>
+<h1>Smit Modi (@devsmitin)</h1>
 
+<h3>👋 Hey there, welcome to my profile. I am a frontend developer from India.</h3>
 
-- 🌱 I'm currently learning **Gatsby JS, Shopify, Tailwind CSS**
+🌱 I'm currently learning **Gatsby JS, Shopify, Tailwind CSS**
 
-- 💬 Ask me about **React JS, Shopify, Bootstrap**
+💬 Ask me about **React JS, Shopify, Bootstrap**
+ 
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
@@ -44,7 +45,7 @@
 </span>
 
 <p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light&background=FFFFFF" alt="devsmitin"/>
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light#gh-light-mode-only" alt="devsmitin"/>
 </span>
 
 <p align="left">
