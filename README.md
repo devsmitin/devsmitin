@@ -36,21 +36,15 @@
 </p>
 
 <p>
-  <span style="display:inline-block;background-color: #fff">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
-  </span>
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
 </span>
 
 <p>
-  <span style="display:inline-block;background-color: #fff">
-    <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
-  </span>
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
 </span>
 
 <p>
-  <span style="display:inline-block;background-color: #fff">
-    <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&" alt="devsmitin"/>
-  </span>
+  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light" alt="devsmitin"/>
 </span>
 
 <p align="left">
