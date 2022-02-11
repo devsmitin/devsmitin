@@ -15,6 +15,22 @@ import shopify from "../images/shopify.svg"
 import contentful from "../images/contentful.svg"
 import netlify from "../images/netlify.svg"
 
+const frontend = [
+  { name: "Bootstrap", src: bootstrap },
+  { name: "Sass", src: sass },
+  { name: "Tailwind", src: tailwind },
+  { name: "JavaScript", src: javascript },
+  { name: "React JS", src: react },
+]
+
+const platforms = [
+  { name: "Shopify", src: shopify },
+  { name: "WordPress", src: wordpress },
+  { name: "Gatsby", src: gatsby },
+  { name: "Contentful", src: contentful },
+  { name: "Netlify", src: netlify },
+]
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Full-stack frontend developer with over 5 years of industry experience" />
@@ -35,7 +51,25 @@ const IndexPage = () => (
           and you have a pretty complete picture of me.
         </p>
         <p className="mb-6 text-2xl">
-          Currently I build Shopify stores with ManekTech.
+          Sometimes I write about{" "}
+          <a
+            href="https://blogs.devsmit.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="something-whale"
+          >
+            Whales
+          </a>
+          . Sometimes I make useful{" "}
+          <a
+            href="https://react.devsmit.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            apps
+          </a>{" "}
+          using React JS.
         </p>
         <div className="mb-6">
           <div className="space-y-12 my-12 text-lg xl:flex xl:mb-0 xl:space-x-16 xl:space-y-0">
@@ -44,11 +78,14 @@ const IndexPage = () => (
                 Front-end development
               </h2>
               <div className="flex space-x-3">
-                <img className="w-10" src={bootstrap} alt="bootstrap logo" />
-                <img className="w-10" src={sass} alt="sass logo" />
-                <img className="w-10" src={tailwind} alt="tailwind logo" />
-                <img className="w-10" src={javascript} alt="javascript logo" />
-                <img className="w-10" src={react} alt="react logo" />
+                {frontend.map(logo => (
+                  <img
+                    className="w-10"
+                    src={logo.src}
+                    alt={`${logo.name} logo`}
+                    title={`${logo.name}`}
+                  />
+                ))}
               </div>
             </div>
             <div className="flex-1">
@@ -56,18 +93,20 @@ const IndexPage = () => (
                 Platforms
               </h2>
               <div className="flex space-x-3">
-                <img className="w-10" src={wordpress} alt="wordpress logo" />
-                <img className="w-10" src={shopify} alt="shopify logo" />
-                <img className="w-10" src={gatsby} alt="gatsby logo" />
-                <img className="w-10" src={contentful} alt="contentful logo" />
-                <img className="w-10" src={netlify} alt="netlify logo" />
+                {platforms.map(logo => (
+                  <img
+                    className="w-10"
+                    src={logo.src}
+                    alt={`${logo.name} logo`}
+                    title={`${logo.name}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </Layout>
 )
 
