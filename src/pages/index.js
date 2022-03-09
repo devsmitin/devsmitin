@@ -53,7 +53,7 @@ const IndexPage = () => (
         <p className="mb-6 text-2xl">
           Sometimes I write about{" "}
           <a
-            href="https://blogs.devsmit.in/"
+            href="https://whales.devsmit.in/"
             target="_blank"
             rel="noopener noreferrer"
             className="something-whale"
