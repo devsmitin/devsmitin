@@ -8,9 +8,9 @@ const GravatarImage = props => {
     <img
       src={url}
       alt={`${email}'s gravatar`}
-      className="rounded-md mx-autos my-6 w-28"
-      height={120}
-      width={120}
+      className="rounded-md my-6 w-32"
+      height={128}
+      width={128}
     />
   )
 }

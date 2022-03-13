@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --grad-bg: #fff7ed;
-  --main-bg: #a799cc;
+  --grad-bg: #eee6dd;
+  --main-bg: #f0b46f;
   --dot-spacing: 30px;
-  --dot-size: 0px;
+  --dot-size: 2px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --grad-bg: #161122;
+    --main-bg: #a799cc;
     --dot-size: 1px;
   }
 }
