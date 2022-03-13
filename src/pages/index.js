@@ -21,12 +21,12 @@ const frontend = [
   { name: "Tailwind", src: tailwind },
   { name: "JavaScript", src: javascript },
   { name: "React JS", src: react },
+  { name: "Gatsby", src: gatsby },
 ]
 
 const platforms = [
   { name: "Shopify", src: shopify },
   { name: "WordPress", src: wordpress },
-  { name: "Gatsby", src: gatsby },
   { name: "Contentful", src: contentful },
   { name: "Netlify", src: netlify },
 ]
@@ -45,12 +45,12 @@ const IndexPage = () => (
           A full-stack frontend developer with a passion for design &amp;
           JavaScript.
         </h1>
-        <p className="mb-6 text-2xl">
+        <p className="mb-6 text-xl">
           I have extensive knowledge of HTML, CSS &amp; JavaScript (ES6) and
           experience with the React JS. Add a lot of curiosity and creativity -
           and you have a pretty complete picture of me.
         </p>
-        <p className="mb-6 text-2xl">
+        <p className="mb-6 text-xl">
           Sometimes I write about{" "}
           <a
             href="https://whales.devsmit.in/"
