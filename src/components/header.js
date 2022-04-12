@@ -13,9 +13,9 @@ const Header = ({ siteTitle }) => (
           <a href="https://github.com/devsmitin" target="_blank" rel="noopener noreferrer">
             <span className="ml-3 mt-0.5">GitHub</span>
           </a>
-          <a href="https://twitter.com/devsmitin" target="_blank" rel="noopener noreferrer">
+          {/* <a href="https://twitter.com/devsmitin" target="_blank" rel="noopener noreferrer">
             <span className="ml-3 mt-0.5">Twitter</span>
-          </a>
+          </a> */}
         </nav>
       </div>
     </div>
