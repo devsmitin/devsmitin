@@ -38,20 +38,21 @@ const IndexPage = () => (
     <div className="container relative flex flex-col justify-between mx-auto px-6 md:px-32 py-4">
       <div className="flex flex-col py-2 max-w-3xl dark:text-white text-gray-800">
         <GravatarImage email="aquarocker20@gmail.com" />
-        <h2 className="text-2xl my-6 dark:text-white">
-          Hi, my name is Smit Modi.
+        <span className="text-2xl my-6 dark:text-white">
+          Hi, my name is <h1 className="inline">Smit Modi</h1>.
+        </span>
+        <h2 className="mb-6 text-3xl md:text-4xl font-bold">
+          A (frontend) web developer with a passion for design &amp; JavaScript.
         </h2>
-        <h1 className="mb-6 text-3xl md:text-4xl font-bold">
-          A full-stack frontend developer with a passion for design &amp;
-          JavaScript.
-        </h1>
         <p className="mb-6 text-xl">
-          I have extensive knowledge of HTML, CSS &amp; JavaScript (ES6) and
-          experience with the React JS. Add a lot of curiosity and creativity -
-          and you have a pretty complete picture of me.
+          I'm an optimist, technologist, developer, data nerd and family man. I
+          have extensive knowledge about web from my 6 years of experience. Add
+          a lot of curiosity and creativity - and you have a pretty complete
+          picture of me.
         </p>
         <p className="mb-6 text-xl">
-          Sometimes I write about{" "}
+          I love tigers 🐯, but bears 🐻 are my kind of things. I have a blog
+          about different types of{" "}
           <a
             href="https://whales.devsmit.in/"
             target="_blank"
@@ -60,16 +61,19 @@ const IndexPage = () => (
           >
             Whales
           </a>
-          . Sometimes I make useful{" "}
+          (built with Gatsby+WordPress).
+        </p>
+        <p className="mb-6 text-xl">
+          If you have a great opportunity for me you can find my resume
           <a
-            href="https://react.devsmit.in/"
+            href="https://drive.google.com/file/d/1ddEcwKOssIYw1zbf7HAuLPe8VMV69_h9"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
           >
-            apps
-          </a>{" "}
-          using React JS.
+            <span className="ml-3 mt-0.5">here</span>
+          </a>
+          .
         </p>
         <div className="mb-6">
           <div className="space-y-12 my-12 text-lg xl:flex xl:mb-0 xl:space-x-16 xl:space-y-0">

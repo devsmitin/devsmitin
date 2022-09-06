@@ -10,12 +10,14 @@ const Header = ({ siteTitle }) => (
       </Link>
       <div className="flex items-center">
         <nav className="font-sans text-gray-800 dark:text-white flex items-center">
-          <a href="https://github.com/devsmitin" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/devsmitin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
             <span className="ml-3 mt-0.5">GitHub</span>
           </a>
-          {/* <a href="https://twitter.com/devsmitin" target="_blank" rel="noopener noreferrer">
-            <span className="ml-3 mt-0.5">Twitter</span>
-          </a> */}
         </nav>
       </div>
     </div>

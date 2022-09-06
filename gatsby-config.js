@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Smit M.`,
-    description: `Full-stack frontend developer with over 5 years of industry experience`,
+    description: `Frontend web developer with 6 years of industry experience`,
     image: `src/images/social.png`,
     siteUrl: `https://devsmit.in/`,
-    author: `@devsmitin`,
-    twitterUsername: `@devsmitin`,
+    author: `@devsmit_in`,
+    twitterUsername: `@devsmit_in`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -31,7 +31,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    `gatsby-source-gravatar`,
+    // `gatsby-source-gravatar`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
