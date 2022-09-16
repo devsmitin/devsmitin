@@ -1,5 +1,4 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 
 const Contact = () => (
   <div className="relative lg:absolute xl:fixed lg:-bottom-32 lg:-right-20 w-72 h-72 lg:w-96 lg:h-96 mx-auto">

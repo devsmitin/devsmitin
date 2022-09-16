@@ -33,7 +33,7 @@ const platforms = [
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Full-stack frontend developer with over 5 years of industry experience" />
+    <Seo title="Full-stack frontend developer with over 6 years of industry experience" />
 
     <div className="container relative flex flex-col justify-between mx-auto px-6 md:px-32 py-4">
       <div className="flex flex-col py-2 max-w-3xl dark:text-white text-gray-800">
@@ -82,8 +82,9 @@ const IndexPage = () => (
                 Front-end development
               </h2>
               <div className="flex space-x-3">
-                {frontend.map(logo => (
+                {frontend.map((logo, i) => (
                   <img
+                    key={`f_${i}`}
                     className="w-10"
                     src={logo.src}
                     alt={`${logo.name} logo`}
@@ -97,8 +98,9 @@ const IndexPage = () => (
                 Platforms
               </h2>
               <div className="flex space-x-3">
-                {platforms.map(logo => (
+                {platforms.map((logo, i) => (
                   <img
+                    key={`p_${i}`}
                     className="w-10"
                     src={logo.src}
                     alt={`${logo.name} logo`}
