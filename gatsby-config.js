@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Smit M.`,
     description: `Frontend web developer with 6 years of industry experience`,
-    image: `src/images/social.png`,
+    image: `images/social.png`,
     siteUrl: `https://devsmit.in/`,
     author: `@devsmit_in`,
     twitterUsername: `@devsmit_in`,
