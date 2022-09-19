@@ -63,6 +63,71 @@ const IndexPage = () => (
           </a>
           (built with Gatsby+WordPress).
         </p>
+
+        <p className="mb-6 text-xl">
+          Find a small list of my work which I do when I'm not at work below
+        </p>
+
+        <div className="mb-6 text-xl">
+          <ul className="list-disc pl-6">
+            <li>
+              <a
+                href="https://react.devsmit.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                https://react.devsmit.in
+              </a>{" "}
+              - Small react demo
+            </li>
+            <li>
+              <a
+                href="https://whales.devsmit.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                https://whales.devsmit.in
+              </a>{" "}
+              - A blog demo of Gatsby JS + WordPress
+            </li>
+            <li>
+              <a
+                href="https://wordpress.devsmit.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                https://wordpress.devsmit.in
+              </a>{" "}
+              - The source for above blog and my WordPress playground
+            </li>
+            <li>
+              <a
+                href="https://storefront.devsmit.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                https://storefront.devsmit.in
+              </a>{" "}
+              - A storefront landing page made with React JS + Tailwind CSS
+            </li>
+            <li>
+              <a
+                href="https://shopify.devsmit.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                https://shopify.devsmit.in
+              </a>{" "}
+              - Coming soon with a blazing fast custom Shopify theme.
+            </li>
+          </ul>
+        </div>
+
         <p className="mb-6 text-xl">
           If you have a great opportunity for me you can find my resume
           <a
@@ -75,6 +140,7 @@ const IndexPage = () => (
           </a>
           .
         </p>
+
         <div className="mb-6">
           <div className="space-y-12 my-12 text-lg xl:flex xl:mb-0 xl:space-x-16 xl:space-y-0">
             <div className="flex-1">
