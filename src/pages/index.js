@@ -60,12 +60,12 @@ const IndexPage = () => (
             className="something-whale"
           >
             Whales
-          </a>
+          </a>{" "}
           (built with Gatsby+WordPress).
         </p>
 
         <p className="mb-6 text-xl">
-          Find a small list of my work which I do when I'm not at work below
+          Find a small list of my work which I do when I'm not at work
         </p>
 
         <div className="mb-6 text-xl">
@@ -123,7 +123,7 @@ const IndexPage = () => (
               >
                 https://shopify.devsmit.in
               </a>{" "}
-              - Coming soon with a blazing fast custom Shopify theme.
+              - A blazing fast custom Shopify theme. (Password: doodle)
             </li>
           </ul>
         </div>
@@ -131,7 +131,7 @@ const IndexPage = () => (
         <p className="mb-6 text-xl">
           If you have a great opportunity for me you can find my resume
           <a
-            href="https://drive.google.com/file/d/1ddEcwKOssIYw1zbf7HAuLPe8VMV69_h9"
+            href="https://drive.google.com/file/d/16mABSGdDl4a3rgOrtbVgGHMkOjXwoWU4"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
