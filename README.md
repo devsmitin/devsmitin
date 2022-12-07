@@ -1,13 +1,13 @@
 <h1>Smit Modi (@devsmitin)</h1>
 
-<h3>👋 Hey there, welcome to my profile. I am a frontend developer from India.</h3>
+<h3>👋 Hey there, welcome to my GitHub. I am a web developer from India.</h3>
 
-🌱 I'm currently learning **Gatsby JS, Shopify, Tailwind CSS**
+🌱 I'm currently learning **React JS and Gatsby JS**
 
-💬 Ask me about **React JS, Shopify, Bootstrap**
+💬 Ask me about **Shopify, Bootstrap, Tailwind CSS**
  
 
-<h3 align="left">Languages and Tools:</h3>
+<h3 align="left">Skills and Tools:</h3>
 <p align="left">
   <img src="/src/images/logos/HTML.svg" alt="HTML" width="40" height="40">
   <img src="/src/images/logos/CSS.svg" alt="CSS" width="40" height="40">
@@ -30,12 +30,12 @@
 
 <p>
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
-</span>
+</p>
 
 <p>
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
-</span>
+</p>
 
 <p>
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light#gh-light-mode-only" alt="devsmitin"/>
-</span>
+</p>
