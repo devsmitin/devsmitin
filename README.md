@@ -32,9 +32,11 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=devsmitin&show_icons=true&locale=en&layout=compact" alt="devsmitin"/>
 </p>
 
+<!--
 <p>
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=devsmitin&show_icons=true&locale=en" alt="devsmitin"/>
 </p>
+-->
 
 <p>
   <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=devsmitin&theme=github-light#gh-light-mode-only" alt="devsmitin"/>
