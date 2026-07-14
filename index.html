@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smit Modi — Senior Shopify Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0A0A;
+    --surface: #111111;
+    --border: #1F1F1F;
+    --border-bright: #2E2E2E;
+    --text: #E8E8E8;
+    --muted: #555555;
+    --muted-mid: #888888;
+    --accent: #5B7FFF;
+    --accent-dim: rgba(91,127,255,0.12);
+    --green: #3DD68C;
+    --green-dim: rgba(61,214,140,0.1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 56px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted-mid);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--muted-mid);
+    text-decoration: none;
+    transition: color .15s;
+    letter-spacing: 0.01em;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* LAYOUT */
+  main { padding-top: 56px; }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+
+  /* HERO */
+  #hero {
+    padding: 100px 0 80px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-inner { max-width: 960px; margin: 0 auto; padding: 0 40px; }
+  .hero-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-tag::before {
+    content: '';
+    display: block; width: 24px; height: 1px; background: var(--accent);
+  }
+  h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 24px;
+  }
+  h1 em {
+    font-style: normal;
+    color: var(--muted-mid);
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: var(--muted-mid);
+    max-width: 520px;
+    line-height: 1.7;
+    margin-bottom: 52px;
+  }
+
+  /* STAT BAR */
+  .stat-bar {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+    margin-bottom: 44px;
+  }
+  .stat-bar-item {
+    padding: 16px 28px;
+    border-right: 1px solid var(--border-bright);
+  }
+  .stat-bar-item:last-child { border-right: none; }
+  .stat-bar-item .n {
+    font-family: 'DM Mono', monospace;
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-bar-item .n sup { font-size: 14px; color: var(--accent); }
+  .stat-bar-item .l {
+    font-size: 11.5px;
+    color: var(--muted-mid);
+    white-space: nowrap;
+  }
+
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    padding: 12px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid var(--border-bright);
+    color: var(--text);
+    transition: border-color .15s, background .15s;
+    letter-spacing: 0.01em;
+  }
+  .btn:hover { border-color: var(--muted-mid); background: var(--surface); }
+  .btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .btn.primary:hover { background: #4a6ef0; border-color: #4a6ef0; }
+
+  /* SECTION */
+  .section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-header {
+    display: flex; align-items: baseline; gap: 16px;
+    margin-bottom: 48px;
+  }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+
+  /* WORK GRID */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .work-card {
+    background: var(--bg);
+    padding: 28px;
+    transition: background .15s;
+    position: relative;
+  }
+  .work-card:hover { background: var(--surface); }
+  .work-card-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .work-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .work-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: var(--green-dim);
+    color: var(--green);
+    border: 1px solid rgba(61,214,140,0.2);
+  }
+  .work-badge.plus {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border-color: rgba(91,127,255,0.2);
+  }
+  .work-card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .work-card p {
+    font-size: 13.5px;
+    color: var(--muted-mid);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .work-stack {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .work-stack span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted-mid);
+    background: var(--surface);
+    border: 1px solid var(--border-bright);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 8px; bottom: 8px;
+    width: 1px; background: var(--border-bright);
+  }
+  .timeline-item {
+    position: relative;
+    padding: 0 0 40px 32px;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute; left: -4px; top: 7px;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--border-bright);
+    border: 1px solid var(--border-bright);
+    transition: background .2s;
+  }
+  .timeline-item:first-child::before {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+  .tl-meta {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 6px;
+  }
+  .tl-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .tl-current {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    border: 1px solid rgba(91,127,255,0.3);
+    padding: 2px 7px;
+    border-radius: 20px;
+    background: var(--accent-dim);
+  }
+  .tl-company {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    margin-bottom: 2px;
+  }
+  .tl-role {
+    font-size: 13px;
+    color: var(--muted-mid);
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .tl-detail {
+    font-size: 13.5px;
+    color: var(--muted-mid);
+    line-height: 1.65;
+    max-width: 540px;
+  }
+
+  /* STACK */
+  .stack-table {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .stack-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border-bottom: 1px solid var(--border);
+  }
+  .stack-row:last-child { border-bottom: none; }
+  .stack-row-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding: 20px 24px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    background: var(--surface);
+  }
+  .stack-row-items {
+    padding: 16px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+  .stack-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 3px;
+    border: 1px solid var(--border-bright);
+    color: var(--muted-mid);
+    background: transparent;
+    transition: border-color .15s, color .15s;
+  }
+  .stack-tag.primary {
+    color: var(--text);
+    border-color: var(--border-bright);
+    background: var(--surface);
+  }
+  .stack-tag.highlight {
+    color: var(--accent);
+    border-color: rgba(91,127,255,0.3);
+    background: var(--accent-dim);
+  }
+  .stack-tag.green {
+    color: var(--green);
+    border-color: rgba(61,214,140,0.25);
+    background: var(--green-dim);
+  }
+
+  /* CONTACT */
+  #contact { padding: 80px 0 100px; }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contact-copy h2 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+  .contact-copy p {
+    font-size: 15px;
+    color: var(--muted-mid);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 380px;
+  }
+  .contact-links {
+    border: 1px solid var(--border-bright);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .contact-links a {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 13.5px;
+    transition: background .12s;
+  }
+  .contact-links a:last-child { border-bottom: none; }
+  .contact-links a:hover { background: var(--surface); }
+  .contact-links a .link-label { color: var(--muted-mid); font-size: 11.5px; font-family: 'DM Mono', monospace; }
+  .contact-links a .arrow { color: var(--accent); font-size: 16px; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    max-width: 960px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  footer span {
+    font-family: 'DM Mono', monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 700px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero-inner, .container { padding: 0 20px; }
+    #hero { padding: 72px 0 56px; }
+    h1 { font-size: 36px; }
+    .stat-bar { flex-wrap: wrap; width: 100%; }
+    .stat-bar-item { flex: 1; min-width: 120px; }
+    .work-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .section { padding: 56px 0; }
+    footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">smit<span>.</span>modi</div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#timeline">Experience</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Senior Shopify Developer</p>
+      <h1>Building storefronts<br><em>that don't look built.</em></h1>
+      <p class="hero-sub">10 years of agency-side Shopify work — custom themes, checkout extensions, platform migrations, and API integrations for international brands.</p>
+
+      <div class="stat-bar">
+        <div class="stat-bar-item">
+          <div class="n">300<sup>+</sup></div>
+          <div class="l">storefronts delivered</div>
+        </div>
+        <div class="stat-bar-item">
+          <div class="n">7<sup>+</sup></div>
+          <div class="l">years Shopify focused</div>
+        </div>
+        <div class="stat-bar-item">
+          <div class="n">10</div>
+          <div class="l">years total experience</div>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:smitm.official@gmail.com">get in touch</a>
+        <a class="btn" href="#work">see the work</a>
+        <a class="btn" href="#">resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">01 / featured work</span>
+        <h2>Selected projects</h2>
+      </div>
+      <div class="work-grid">
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2019–2021</span>
+            <span class="work-badge plus">Shopify Plus</span>
+          </div>
+          <h3>The Man Company</h3>
+          <p>Custom checkout experiences and React-powered storefront components for one of India's leading men's grooming brands on Shopify Plus.</p>
+          <div class="work-stack">
+            <span>Shopify Plus</span><span>React</span><span>Liquid</span><span>Checkout customisation</span>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2022</span>
+            <span class="work-badge">Shopify</span>
+          </div>
+          <h3>Woolzies Home Essentials</h3>
+          <p>Pixel-perfect conversion of Adobe XD designs into a fully responsive Shopify theme. Reusable component architecture built for long-term maintainability.</p>
+          <div class="work-stack">
+            <span>Liquid</span><span>JavaScript</span><span>Adobe XD</span><span>Responsive</span>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2024</span>
+            <span class="work-badge">Shopify</span>
+          </div>
+          <h3>MV Agusta</h3>
+          <p>Single-page pre-booking storefront for a product launch campaign. Lead generation focus with tight deadline delivery and AICO ERP integration.</p>
+          <div class="work-stack">
+            <span>Liquid</span><span>JavaScript</span><span>AICO ERP</span><span>Landing page</span>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2025</span>
+            <span class="work-badge">Shopify</span>
+          </div>
+          <h3>Ecofort</h3>
+          <p>Pixel-perfect Figma-to-Shopify build with full AICO ERP integration to streamline business operations. Scalable, maintainable component architecture.</p>
+          <div class="work-stack">
+            <span>Liquid</span><span>Figma</span><span>AICO ERP</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2026</span>
+            <span class="work-badge">Migration</span>
+          </div>
+          <h3>Laviss</h3>
+          <p>Full store migration from Vilkas ePages to Shopify. 3,300+ orders, 2,500+ customers, 275+ products migrated with custom data mapping and zero business disruption.</p>
+          <div class="work-stack">
+            <span>Adorn Precious</span><span>GraphQL</span><span>Storefront API</span><span>Data migration</span>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-top">
+            <span class="work-year">2026</span>
+            <span class="work-badge">Shopify</span>
+          </div>
+          <h3>Vultera</h3>
+          <p>Full storefront redesign from updated Figma specs. Reusable theme components and responsive layouts built for scalability and ongoing maintainability.</p>
+          <div class="work-stack">
+            <span>Liquid</span><span>Figma</span><span>JavaScript</span><span>Responsive</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">02 / experience</span>
+        <h2>Career timeline</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Oct 2023 – Present</span>
+          </div>
+          <div class="tl-company">Brightness Software Development</div>
+          <div class="tl-role">Senior Shopify Developer <span class="tl-current">current</span></div>
+          <div class="tl-detail">Lead end-to-end Shopify Plus development for international brands. Theme App Extensions, Admin UI Extensions, Checkout UI Extensions. GraphQL, Storefront API, Admin API integrations. Mentoring developers through code reviews.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Jun – Sep 2023</span>
+          </div>
+          <div class="tl-company">Dit Interactive</div>
+          <div class="tl-role">Senior Shopify Developer / Team Lead</div>
+          <div class="tl-detail">Direct client engagement, technical leadership on complex custom theme builds, developer mentoring.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Jan – Jun 2023</span>
+          </div>
+          <div class="tl-company">e-Wise Solutions</div>
+          <div class="tl-role">Shopify / Full-stack Developer</div>
+          <div class="tl-detail">Custom payment gateway integration built with Laravel. Product, collection, and cart experience customisation.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Jun 2021 – Oct 2022</span>
+          </div>
+          <div class="tl-company">ManekTech</div>
+          <div class="tl-role">Shopify Developer</div>
+          <div class="tl-detail">Dedicated Shopify developer working directly with clients. Figma and Adobe XD to responsive Shopify theme conversion. Cross-functional team collaboration.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Sep 2019 – Jun 2021</span>
+          </div>
+          <div class="tl-company">Lucent Innovation</div>
+          <div class="tl-role">Frontend Developer & Project Manager</div>
+          <div class="tl-detail">Shopify storefronts, reusable React components, client communication and project planning. Dual technical and managerial role.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Nov 2016 – Feb 2019</span>
+          </div>
+          <div class="tl-company">Multidots Solutions</div>
+          <div class="tl-role">Frontend Web Developer</div>
+          <div class="tl-detail">Responsive websites in HTML, CSS, JavaScript, and WordPress. UI design to production-ready interface conversion.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">
+            <span class="tl-period">Jul – Nov 2016</span>
+          </div>
+          <div class="tl-company">Biznovare Solutions</div>
+          <div class="tl-role">Web Developer / Designer — Intern</div>
+          <div class="tl-detail">Frontend development and UI design in Odoo. The beginning.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">03 / technical depth</span>
+        <h2>Stack & expertise</h2>
+      </div>
+      <div class="stack-table">
+
+        <div class="stack-row">
+          <div class="stack-row-label">Shopify</div>
+          <div class="stack-row-items">
+            <span class="stack-tag highlight">Shopify Plus</span>
+            <span class="stack-tag primary">Liquid</span>
+            <span class="stack-tag primary">Checkout UI Extensions</span>
+            <span class="stack-tag primary">Theme App Extensions</span>
+            <span class="stack-tag">Shopify Functions</span>
+            <span class="stack-tag">Metafields</span>
+            <span class="stack-tag">Metaobjects</span>
+            <span class="stack-tag">Shopify CLI</span>
+          </div>
+        </div>
+
+        <div class="stack-row">
+          <div class="stack-row-label">Frontend</div>
+          <div class="stack-row-items">
+            <span class="stack-tag primary">JavaScript ES6+</span>
+            <span class="stack-tag primary">Sass / CSS3</span>
+            <span class="stack-tag primary">React</span>
+            <span class="stack-tag">TypeScript</span>
+            <span class="stack-tag">HTML5</span>
+            <span class="stack-tag">Responsive Design</span>
+            <span class="stack-tag">Accessibility</span>
+          </div>
+        </div>
+
+        <div class="stack-row">
+          <div class="stack-row-label">APIs</div>
+          <div class="stack-row-items">
+            <span class="stack-tag primary">Storefront API</span>
+            <span class="stack-tag primary">Admin API</span>
+            <span class="stack-tag primary">GraphQL</span>
+            <span class="stack-tag">REST API</span>
+            <span class="stack-tag">AICO ERP</span>
+            <span class="stack-tag">Matrixify</span>
+            <span class="stack-tag">GTM / GA4</span>
+          </div>
+        </div>
+
+        <div class="stack-row">
+          <div class="stack-row-label">Themes</div>
+          <div class="stack-row-items">
+            <span class="stack-tag primary">Dawn</span>
+            <span class="stack-tag primary">Horizon</span>
+            <span class="stack-tag primary">Prestige</span>
+            <span class="stack-tag">Impulse</span>
+            <span class="stack-tag">Turbo</span>
+            <span class="stack-tag">Concept</span>
+            <span class="stack-tag">Adorn Precious</span>
+          </div>
+        </div>
+
+        <div class="stack-row">
+          <div class="stack-row-label">Tooling</div>
+          <div class="stack-row-items">
+            <span class="stack-tag primary">Git / GitHub</span>
+            <span class="stack-tag primary">Figma</span>
+            <span class="stack-tag">Postman</span>
+            <span class="stack-tag">Jira</span>
+            <span class="stack-tag">SSH</span>
+            <span class="stack-tag green">Claude</span>
+            <span class="stack-tag green">OpenCode</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <h2>Let's build something.</h2>
+          <p>Available for contract and freelance work — Shopify theme builds, custom sections, checkout extensions, migrations, or ongoing agency support.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:smitm.official@gmail.com">send an email</a>
+          </div>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:smitm.official@gmail.com">
+            <div>
+              <div class="link-label">email</div>
+              <div>smitm.official@gmail.com</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+          <a href="https://github.com/devsmitin" target="_blank" rel="noopener">
+            <div>
+              <div class="link-label">github</div>
+              <div>github.com/devsmitin</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+          <a href="https://in.linkedin.com/in/devsmitin" target="_blank" rel="noopener">
+            <div>
+              <div class="link-label">linkedin</div>
+              <div>linkedin.com/in/devsmitin</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+          <a href="#">
+            <div>
+              <div class="link-label">resume</div>
+              <div>download PDF</div>
+            </div>
+            <span class="arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 Smit Modi · Ahmedabad, India</span>
+  <span>built to spec. deployed on time.</span>
+</footer>
+
+</body>
+</html>
