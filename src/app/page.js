@@ -1,6 +1,62 @@
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Smit Modi",
+            url: "https://devsmit.in",
+            jobTitle: "Senior Shopify Developer",
+            description:
+              "10 years of agency-side Shopify work — custom themes, checkout extensions, platform migrations, and API integrations for international brands.",
+            sameAs: [
+              "https://github.com/devsmitin",
+              "https://in.linkedin.com/in/devsmitin",
+            ],
+            knowsAbout: [
+              "Shopify Plus",
+              "Liquid",
+              "Checkout UI Extensions",
+              "Theme App Extensions",
+              "Shopify Functions",
+              "Metafields",
+              "Metaobjects",
+              "Shopify CLI",
+              "JavaScript ES6+",
+              "Sass / CSS3",
+              "React",
+              "TypeScript",
+              "HTML5",
+              "Responsive Design",
+              "Accessibility",
+              "Storefront API",
+              "Admin API",
+              "GraphQL",
+              "REST API",
+              "AICO ERP",
+              "Matrixify",
+              "GTM / GA4",
+              "Git / GitHub",
+              "Figma",
+              "Postman",
+              "Jira",
+              "SSH",
+            ],
+            alumniOf: [
+              { "@type": "Organization", name: "Brightness Software Development" },
+              { "@type": "Organization", name: "Dit Interactive" },
+              { "@type": "Organization", name: "e-Wise Solutions" },
+              { "@type": "Organization", name: "ManekTech" },
+              { "@type": "Organization", name: "Lucent Innovation" },
+              { "@type": "Organization", name: "Multidots Solutions" },
+              { "@type": "Organization", name: "Biznovare Solutions" },
+            ],
+          }),
+        }}
+      />
       <nav>
         <div className="nav-logo">smit<span>.</span>modi</div>
         <ul className="nav-links">
@@ -36,7 +92,7 @@ export default function Home() {
             <div className="hero-actions">
               <a className="btn primary" href="mailto:smitm.official@gmail.com">get in touch</a>
               <a className="btn" href="#work">see the work</a>
-              <a className="btn" href="#">resume</a>
+              <a className="btn" href="/Smit-Modi-2026.pdf" target="_blank" rel="noopener noreferrer">resume</a>
             </div>
           </div>
         </section>
@@ -304,7 +360,7 @@ export default function Home() {
                   </div>
                   <span className="arrow">↗</span>
                 </a>
-                <a href="#">
+                <a href="/Smit-Modi-2026.pdf" target="_blank" rel="noopener noreferrer">
                   <div>
                     <div className="link-label">resume</div>
                     <div>download PDF</div>
