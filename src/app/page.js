@@ -9,7 +9,7 @@ export default function Home() {
             "@type": "Person",
             name: "Smit Modi",
             url: "https://devsmit.in",
-            jobTitle: "Senior Shopify Developer",
+            jobTitle: "Shopify Developer with proven industry experience",
             description:
               "10 years of agency-side Shopify work — custom themes, checkout extensions, platform migrations, and API integrations for international brands.",
             sameAs: [
@@ -70,8 +70,8 @@ export default function Home() {
       <main>
         <section id="hero">
           <div className="hero-inner">
-            <p className="hero-tag">Senior Shopify Developer</p>
-            <h1>Building storefronts<br /><em>that don&apos;t look built.</em></h1>
+            <p className="hero-tag">Shopify Developer</p>
+            <h1>Creating Shopify experiences<br /><em>engineered for growth.</em></h1>
             <p className="hero-sub">10 years of agency-side Shopify work — custom themes, checkout extensions, platform migrations, and API integrations for international brands.</p>
 
             <div className="stat-bar">
